@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(./images/bg-intro-mobile.png);
+    background-color:  hsl(0, 100%, 74%) ;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper{
+    max-width: 90%;
+    margin: 1rem auto;
+}
+
+.text{
+    color: white;
+    text-align: center;
+}
+
+.text h1{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+.text p{
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+form .head{
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem 0;
+    background: hsl(248, 32%, 49%);
+    padding: 1rem 7rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 0 rgba(0,0,0,.2);
+}
+form span{
+    color: hsl(246, 25%, 77%);
+}
+
+form .inputs{
+    background: white;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 0 rgba(0,0,0,.2);
+}
+.first_name,
+.last_name,
+.email,
+.password{
+    position: relative;
+}
+.error{
+    position: absolute;
+    right: 1rem;   
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+.error.open{
+    display: initial;
+}
+.error_msg{
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    color: red;
+    text-align: right;
+    display: none;
+}
+.error_msg.open{
+    display: initial;
+}
+.inputs input,button{
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+
+button{
+    font-size: 1.5rem ;
+    background: hsl(154, 59%, 51%);
+    color: #fff;
+    /* font-weight: 600; */
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 0 5px 0 rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+
+
+.inputs input::placeholder{
+    text-transform: capitalize;
+    font-weight: 600;
+    
+}
+
+form p{
+    padding-bottom:1rem;
+    text-align: center;
+}
+form p .link{
+    display: inline;
+    /* margin: .5rem; */
+}
+
+form p .link a{
+    display: inline;
+    text-decoration: none;
+    color: red ;
+    font-weight: 600;
+}
+
+@media (min-width:1000px){
+    body{
+        background: url(./images/bg-intro-desktop.png);
+        background-color:  hsl(0, 100%, 74%) ;
+        background-position: center;
+        background-size: cover;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    .text{
+        align-self: center;
+        text-align: start;
+    }
+
+    .text h1{
+        font-size: 4rem;
+    }
+    .text h1 span{
+        display: block;
+    }
+    form{
+        width: 1200px;
+    }
+    form .head{
+        padding: 1rem 1rem;
+    }
+    .inputs input{
+        font-size: 1.3rem;
+    }
+}
