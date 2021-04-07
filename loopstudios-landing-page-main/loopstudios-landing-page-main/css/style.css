@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  height: 100vh;
+  background: url(../images/mobile/image-hero.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-inline: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+header nav .header-logo {
+  z-index: 2;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  left: 0;
+  padding-inline: 1rem;
+  transform: translateX(100%);
+  transition: all .8s ease;
+  top: 0;
+}
+
+header nav ul li {
+  padding: 1rem 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+header ul.open {
+  transform: translateX(0);
+}
+
+header .menu {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .menu .close {
+  display: none;
+}
+
+header .menu.open .close {
+  display: block;
+}
+
+header .menu.open .hamburger {
+  display: none;
+}
+
+header .note {
+  color: #fff;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  padding: 1rem;
+  margin: 5rem 0;
+}
+
+main {
+  margin: 5rem 0;
+  padding-inline: 1rem;
+}
+
+main img {
+  width: 100%;
+}
+
+main .text {
+  text-align: center;
+}
+
+main .text h1 {
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+main .text p {
+  font-size: 1.5rem;
+}
+
+section .section_top .section_btn {
+  display: none;
+}
+
+section .section-header {
+  text-transform: uppercase;
+  margin: .5rem 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+section .cards {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+section .cards .card {
+  position: relative;
+  margin: 1rem 0;
+  cursor: pointer;
+  color: white;
+  transition: all .3s ease;
+}
+
+section .cards .card:hover {
+  opacity: .6;
+  color: #000;
+}
+
+section .cards .card img {
+  width: 100%;
+}
+
+section .cards .card h3 {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 2rem;
+  bottom: 12px;
+  font-weight: 100;
+  padding-inline-start: 1rem;
+}
+
+section .cards .card h3 span {
+  display: block;
+}
+
+section .bottom_btn {
+  outline: none;
+  border: 2px solid #000;
+  font-size: 1.5rem;
+  padding: .7rem 3rem;
+  background: transparent;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+  transition: all .8s ease;
+}
+
+section .bottom_btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.footer {
+  background: black;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.footer .left {
+  padding: 1rem 0;
+}
+
+.footer .left ul {
+  list-style: none;
+}
+
+.footer .left ul li {
+  margin: 1rem 0;
+}
+
+.footer .left ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  header {
+    background: url(../images/desktop/image-hero.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    padding-inline: 6rem;
+  }
+  header .note {
+    width: 50%;
+    margin-top: 8rem;
+  }
+  header nav .header-logo {
+    flex: 1;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: initial;
+    width: initial;
+    height: initial;
+    transform: translateX(0);
+    transition: all .8s ease;
+    background: initial;
+    list-style: none;
+    flex: 1;
+    justify-content: space-between;
+  }
+  header nav ul li {
+    padding: 1rem 0;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: .3rem;
+  }
+  header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: .1rem;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-radius: 3rem;
+    transition: width .5s ease;
+  }
+  header nav ul li a:hover::after {
+    width: 100%;
+  }
+  header .menu {
+    display: none;
+  }
+  main {
+    display: flex;
+    width: 90%;
+    margin: 5rem auto;
+  }
+  main picture {
+    flex: 1;
+  }
+  main .text {
+    position: relative;
+    flex: 1;
+    text-align: start;
+    background: #fff;
+    align-self: flex-end;
+    padding: 2rem;
+    right: 10rem;
+  }
+  main .text p {
+    font-size: 1.3rem;
+  }
+  section {
+    width: 90%;
+    margin: 0 auto;
+  }
+  section .section_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+  section .section_top .section_btn {
+    display: initial;
+    outline: none;
+    border: 2px solid #000;
+    font-size: 1.5rem;
+    padding: .7rem 3rem;
+    background: transparent;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s ease;
+  }
+  section .section_top .section_btn:hover {
+    background: #000;
+    color: #fff;
+  }
+  section .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  section .bottom_btn {
+    display: none;
+  }
+  .footer .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .wrapper .left {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .wrapper .left .footer-logo {
+    align-self: flex-start;
+    margin: 1rem 0;
+  }
+  .footer .wrapper .left ul {
+    display: flex;
+  }
+  .footer .wrapper .left ul li a {
+    padding: .3rem 0;
+    position: relative;
+    transition: all .5s ease;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+  .footer .wrapper .left ul li a::after {
+    content: '';
+    position: absolute;
+    height: .1rem;
+    width: 0;
+    background: white;
+    left: 0;
+    bottom: 0;
+    border-radius: 3rem;
+    transition: width .5s ease;
+  }
+  .footer .wrapper .left ul li a:hover::after {
+    width: 100%;
+  }
+  .footer .wrapper .left ul li .links {
+    margin-inline: 1rem;
+  }
+  .footer .wrapper .social-media {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .wrapper .social-media .icons {
+    margin: 1rem;
+    align-self: flex-end;
+  }
+  .footer .wrapper .social-media .icons .icon {
+    margin-inline: .5rem;
+  }
+}
