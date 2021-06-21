@@ -1,0 +1,372 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.4;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+  justify-content: space-between;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+header nav ul {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(100%);
+  list-style: none;
+  background-color: white;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: .5rem;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.3), -12px 22px 12px rgba(0, 0, 0, 0.3);
+  transition: all .5s ease;
+}
+
+header nav ul li {
+  margin: 1rem 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #2d314d;
+}
+
+header .btn {
+  display: none;
+}
+
+header .menu {
+  cursor: pointer;
+}
+
+header .menu .close {
+  display: none;
+}
+
+header .menu.open .hamburger {
+  display: none;
+}
+
+header .menu.open .close {
+  display: initial;
+}
+
+header ul.open {
+  transform: translate(-50%);
+}
+
+.main {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  height: 110vh;
+}
+
+.main .main_pic {
+  position: absolute;
+  bottom: 40%;
+}
+
+.main .main_pic img {
+  background: url(../images/bg-intro-mobile.svg) no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  width: 100%;
+}
+
+.main .main_text {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.main .main_text h1 {
+  color: #2d314d;
+  padding: 0 2rem;
+  font-size: 2.5rem;
+}
+
+.main .main_text p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.main .main_text .main_btn button {
+  padding: 1rem 2rem;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  border-radius: 3rem;
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.section {
+  background: #fafafa;
+  margin: 4rem 0;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.section .easybank .section_head h1 {
+  font-size: 2.5rem;
+  padding: 0 2rem;
+  margin: 1rem;
+}
+
+.section .easybank .section_head p {
+  font-size: 1.2rem;
+}
+
+.section .easybank .list {
+  margin: 2rem 0;
+}
+
+.section .easybank .list .items {
+  margin: 2rem 0;
+}
+
+.section .easybank .list .items h2 {
+  margin: 1rem 0;
+}
+
+.section .easybank .list .items p {
+  font-size: 1.1rem;
+  padding: 0 2rem;
+}
+
+article {
+  padding: 1rem;
+}
+
+article .article_latest .card {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  border-radius: .5rem;
+}
+
+article .article_latest .card .card_img {
+  overflow: hidden;
+}
+
+article .article_latest .card .card_img img {
+  width: 100%;
+  border-radius: .5rem .5rem 0 0;
+}
+
+article .article_latest .card .text {
+  padding: 1.5rem;
+}
+
+article .article_latest .card .text h1 {
+  margin: 1rem 0;
+}
+
+footer {
+  background: #2d314d;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+footer .logo {
+  margin-bottom: 1rem;
+}
+
+footer .icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin: .7rem 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  transition: all .5s ease;
+}
+
+footer ul li a:hover {
+  color: #31d35c;
+}
+
+footer .last .btn button {
+  padding: 1rem 2rem;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  border-radius: 3rem;
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+@media (min-width: 900px) {
+  header {
+    padding: 0 4rem;
+  }
+  header nav {
+    align-items: center;
+    padding: .4rem 0;
+  }
+  header nav .logo {
+    flex-basis: 10%;
+  }
+  header nav ul {
+    position: initial;
+    height: 0;
+    transform: translate(0);
+    flex-direction: row;
+    width: 0;
+    justify-content: space-between;
+    flex-basis: 37%;
+  }
+  header nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+  header nav ul li a {
+    position: relative;
+  }
+  header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #31d35c;
+    left: 0;
+    bottom: -20px;
+    transition: all .3s ease-in-out;
+  }
+  header nav ul li a:hover::after {
+    width: 100%;
+  }
+  header .menu {
+    display: none;
+  }
+  header .btn {
+    display: initial;
+  }
+  header .btn button {
+    padding: 1rem 2rem;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    border-radius: 3rem;
+    background: linear-gradient(to right, #31d35c, #2bb7da);
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  .main {
+    flex-direction: row;
+    align-items: center;
+    height: 70vh;
+  }
+  .main > * {
+    flex-basis: 100%;
+  }
+  .main .main_pic {
+    position: relative;
+    bottom: 10%;
+  }
+  .main .main_pic img {
+    width: 100%;
+    background: url(../images/bg-intro-desktop.svg) no-repeat;
+    background-size: cover;
+    background-position-x: -100px;
+    background-position-y: -50px;
+  }
+  .main .main_text {
+    text-align: start;
+    padding-left: 4rem;
+  }
+  .main .main_text h1 {
+    padding: 0;
+    width: 400px;
+    font-size: 3.5rem;
+  }
+  .main .main_text p {
+    font-size: 1.3rem;
+    width: 410px;
+  }
+  .section {
+    margin-top: 0;
+    padding-inline: 4rem;
+  }
+  .section .easybank {
+    padding-top: 2rem;
+    text-align: start;
+  }
+  .section .easybank .section_head h1 {
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .section .easybank .section_head p {
+    width: 600px;
+  }
+  .section .easybank .list {
+    display: flex;
+    gap: 1rem;
+  }
+  .section .easybank .list .items h2 {
+    padding: 0;
+  }
+  .section .easybank .list .items p {
+    padding: 0;
+  }
+  article {
+    padding-inline: 4rem;
+  }
+  article .article_list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    text-align: start;
+  }
+  footer .links {
+    display: flex;
+    gap: 10rem;
+    flex-basis: 55%;
+  }
+  footer .last {
+    text-align: end;
+  }
+}

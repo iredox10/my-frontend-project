@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f4f6;
+}
+
+header {
+  background: #fff;
+  min-height: 10vh;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+  position: fixed;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 1rem auto;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+
+header nav ul {
+  list-style: none;
+  position: absolute;
+  width: 90%;
+  top: 120%;
+  left: 5%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 40vh;
+  transform: translateX(100vw);
+  transition: all .3s ease;
+  border-radius: 12px;
+}
+
+header nav ul li a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.3rem;
+}
+
+header nav .btn {
+  display: none;
+}
+
+header ul.open {
+  transform: translate(0);
+  box-shadow: 12px 12px 40rem rgba(0, 0, 0, 0.4);
+}
+
+header .hamburger {
+  align-self: center;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+header .hamburger .close {
+  display: none;
+}
+
+header .hamburger.open .close {
+  display: flex;
+}
+
+header .hamburger.open .hamburger {
+  display: none;
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  text-align: center;
+}
+
+.main .text {
+  width: 90%;
+  margin: 0 auto;
+  margin-block: 2rem;
+}
+
+.main .text h1 {
+  font-size: 3em;
+}
+
+.main .text h1 span {
+  display: block;
+}
+
+.main .text p {
+  font-size: 1.3em;
+  text-align: start;
+  margin: 1rem;
+}
+
+.main .text .btn button {
+  padding: .7rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: linear-gradient(to left, #2bb7da, #31d35c);
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.main .main_pic img {
+  width: 100%;
+  background: url(../images/bg-intro-mobile.svg) no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+section {
+  background: #fafafa;
+}
+
+section .easybank {
+  text-align: center;
+  font-size: 1.2rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+section .easybank .section_head {
+  padding: 1rem;
+}
+
+section .easybank .section_head h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+section .easybank .list {
+  padding: 1rem 0;
+}
+
+section .easybank .list .items {
+  margin: 2rem 0;
+}
+
+section .easybank .list .items h2, section .easybank .list .items p {
+  margin: 1rem 0;
+}
+
+article {
+  margin: 5rem 0;
+}
+
+article .article_latest {
+  width: 90%;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+article .article_latest .header {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+article .article_latest .article_list .card {
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin: 4rem 0;
+  border-radius: 12px;
+}
+
+article .article_latest .article_list .card .card_img {
+  overflow: hidden;
+}
+
+article .article_latest .article_list .card .card_img img {
+  border-radius: 12px 12px 0 0;
+  max-width: 100%;
+}
+
+article .article_latest .article_list .card .text {
+  padding: 1rem 2rem;
+  text-align: start;
+}
+
+article .article_latest .article_list .card .text h1 {
+  font-size: 1.6rem;
+}
+
+article .article_latest .article_list .card .text p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+footer {
+  background: #2d314d;
+}
+
+footer .wrapper {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+footer .wrapper .logo {
+  margin: 1rem;
+}
+
+footer .wrapper .icons img {
+  width: 2rem;
+  margin-inline: .5rem;
+}
+
+footer .wrapper .links ul {
+  list-style-type: none;
+}
+
+footer .wrapper .links ul li {
+  margin: 1rem 0;
+}
+
+footer .wrapper .links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+footer .wrapper .last .btn button {
+  padding: .7rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: linear-gradient(to left, #2bb7da, #31d35c);
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+footer .wrapper .last p {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  header nav ul {
+    position: initial;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    list-style: none;
+    transform: translateX(0rem);
+    transition: all .3s ease;
+    height: initial;
+    border-radius: 0;
+  }
+  header nav ul li a {
+    position: initial;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+    position: absolute;
+  }
+  header nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    width: 0;
+    height: .2rem;
+    background: #31d35c;
+    border-radius: 5rem;
+    transition: width .5s ease;
+  }
+  header nav ul li a:hover::before {
+    width: 100%;
+  }
+  header nav .btn button {
+    padding: .7rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background: linear-gradient(to left, #2bb7da, #31d35c);
+    cursor: pointer;
+    text-transform: capitalize;
+    padding: .5rem 1rem;
+  }
+  header nav .hamburger {
+    display: none;
+  }
+  .main {
+    position: relative;
+    margin: 0 auto;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: start;
+    height: 90vh;
+    width: 100%;
+  }
+  .main .text {
+    align-self: center;
+    width: 60%;
+  }
+  .main .text h1 {
+    font-size: 3em;
+  }
+  .main .text h1 span {
+    display: block;
+  }
+  .main .text p {
+    font-size: 1.3em;
+    width: 80%;
+  }
+  .main .text .btn button {
+    padding: .7rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background: linear-gradient(to left, #2bb7da, #31d35c);
+    cursor: pointer;
+  }
+  .main .main_pic {
+    align-self: flex-start;
+  }
+  .main .main_pic img {
+    width: 100%;
+    background: url(../images/bg-intro-desktop.svg) no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  section {
+    background: #fafafa;
+  }
+  section .easybank {
+    text-align: start;
+    font-size: 1.2rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+  section .easybank .section_head {
+    padding: 1rem;
+  }
+  section .easybank .section_head h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+  section .easybank .list {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  section .easybank .list .items {
+    margin: 2rem 0;
+  }
+  section .easybank .list .items h2, section .easybank .list .items p {
+    margin: 1rem 0;
+  }
+  article .article_latest .article_list {
+    display: flex;
+    gap: 1rem;
+  }
+  article .article_latest .article_list .card .text {
+    padding: 1rem;
+  }
+  footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+  }
+  footer .wrapper .first .icons {
+    margin-top: 2rem;
+  }
+  footer .wrapper .links {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .wrapper .last {
+    text-align: end;
+  }
+}
