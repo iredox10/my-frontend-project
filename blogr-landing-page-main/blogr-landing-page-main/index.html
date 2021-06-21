@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Blogr]</title>
+  <script src="script.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+      <div class="nav_links">
+      <ul class="links">
+        <li>
+          <a href="#">product <img src="images/icon-arrow-dark.svg" alt="" class="arrow"></a>
+          <ul class="product_links">
+            <li><a href="#">overview</a></li>
+            <li><a href="#">pricing</a></li>
+            <li><a href="#">features</a></li>
+            <li><a href="#">integration</a></li>
+          </ul>
+        </li>
+        <li><a href="#">company <img src="images/icon-arrow-dark.svg" alt="" class="arrow"></a>
+        <ul class="company_links">
+          <li><a href="#">about</a></li>
+          <li><a href="#">team</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">careers</a></li>
+        </ul>
+        </li>
+        <li><a href="">connect <img src="images/icon-arrow-dark.svg" alt="" class="arrow"></a>
+        <ul class="connect_links">
+          <li><a href="#">contact</a></li>
+          <li><a href="#">newsletter</a></li>
+          <li><a href="#">linkedin</a></li>
+        </ul>
+        </li>
+        <div class="nav_btn">
+          <button>login</button>
+          <button class="style_btn">sign up</button>
+        </div>
+      </ul>
+    </div>
+      <div class="menu">
+        <img src="images/icon-hamburger.svg" alt="" class="hamburger">
+        <img src="images/icon-close.svg" alt="" class="close_btn">
+      </div>
+    </nav>
+  <div class="main">
+    <div class="main_text">
+      <h1>A modern publishing platform</h1>
+      <p>Grow your audience and build your online brand</p>
+    </div>
+    <div class="main_btn">
+      <button class="style_btn">Start for Free</button>
+      <button>learn more</button>
+    </div>
+  </div>
+  </header>
+  
+  <section class="design_container">
+    <h1 class="design_head">Designed for the future</h1>
+    <div class="design">
+      <div class="design_text">
+        <div class="first_text">
+          <h1>Introducing an extensible editor</h1>
+          <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+            change the looks of a blog.
+          </p>
+        </div>
+        <div class="second_text">
+          <h1>Robust content management</h1>
+          <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+        </div>
+      </div>
+    
+    <div class="design_img">
+      <picture>
+        <source media="(min-width: 900px)" srcset="images/illustration-editor-desktop.svg" sizes="">
+      </picture>
+      <img src="images/illustration-editor-mobile.svg" alt="image">
+    </div>
+  </div>
+  </section>
+  
+  <section class="state">
+    <div class="state_img">
+      <img src="images/illustration-phones.svg" alt="">
+    </div>
+    <div class="state_text">
+      <h1>State of the Art Infrastructure</h1>
+      <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="article_img">
+      <picture>
+        <source media="(min-width: 900px)" srcset="images/illustration-laptop-desktop.svg" >
+        <img src="images/illustration-laptop-mobile.svg" alt="">
+      </picture>
+    </div>
+    <div class="article_text">
+      <div class="first_text">
+        <h1>Free, open, simple</h1>
+        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+        </p>
+      </div>
+      <div class="second_text">
+        <h1>Powerful tooling</h1>
+        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+          capable of producing even the most complicated sites.</p>
+      </div>
+    </div>
+  </article>
+  
+  
+  <div class="footer">
+  <div class="footer_logo">
+    <img src="images/logo.svg" alt="logo">
+  </div>    
+  <div class="footer_links">
+    <ul class="first_link">
+      <h2>product</h2>
+      <li><a href="#">overview</a></li>
+      <li><a href="#">pricing</a></li>
+      <li><a href="#">Marketplace</a></li>
+      <li><a href="#">features</a></li>
+      <li><a href="#">integration</a></li>
+    </ul>
+    <ul class="second_link">
+      <h2>company</h2>
+      <li><a href="#">about</a></li>
+      <li><a href="#">team</a></li>
+      <li><a href="#">blog</a></li>
+      <li><a href="#">careers</a></li>
+    </ul>
+    <ul class="last_link">
+      <h2>connect</h2>
+      <li><a href="#">contact</a></li>
+      <li><a href="#">newsletter</a></li>
+      <li><a href="#">linkedin</a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">idris adam</a>.
+  </div>
+</body>
+</html>
